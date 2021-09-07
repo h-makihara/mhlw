@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  mhlw-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - 8282:8080
+    volumes:
+      - './api/src/:/app:rw'
+    tty: true
